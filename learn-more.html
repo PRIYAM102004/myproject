@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn more </title>
+    <link rel="stylesheet" href="./learn-more.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+
+      <!-- nav bar  -->
+     <!-- 1st line: navbar (nav links + welcome msg) -->
+<div class="nav-bar">
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./dashboard.html">Dashboard</a></li>
+        <li><a href="./weather.html">Weather</a></li>
+        <li><a href="./crop-recommendation.html">Crop Recommendation</a></li>
+        <li><a href="./form-expence.html">Farm Expenses</a></li>
+        <li><a href="./alert.html">Alerts / Notifications</a></li>
+    </ul>
+   
+</div>
+
+<!-- 2nd line: logo bar (separate, independent) -->
+
+<div class="logo-bar">
+    <div class="logo">
+        <img src="./WhatsApp Image 2026-09-07 at 2.42.31 PM.jpg">
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+
+    <div class="language-select">
+        <select name="language" id="language">
+            <option value="en">English</option>
+            <option value="ta">தமிழ்</option>
+            <option value="hi">हिन्दी</option>
+        </select>
+    </div>
+
+
+<!-- login log out button  -->
+ <div class="auth-buttons">
+    <a href="./login.html" id="loginLink"><button id="loginBtn">Login</button></a>
+    <button id="logoutBtn" style="display:none;" onclick="logoutUser()">Logout</button>
+</div>
+
+</div>
+
+
+
+
+    <section class="about-hero">
+    <h1>About Uzhavan</h1>
+    <p>Empowering farmers with smart technology, one field at a time.</p>
+</section>
+
+<section class="mission">
+    <h2>Our Mission</h2>
+    <p>Uzhavan was built with one simple goal — to bring modern technology closer to every farmer, regardless of their location or resources. We believe farming decisions should be backed by real data, not guesswork. From weather forecasts to crop recommendations, expense tracking to timely alerts, Uzhavan brings everything a farmer needs onto one simple platform.</p>
+</section>
+
+<section class="why-us">
+    <h2>Why Choose Uzhavan?</h2>
+    <div class="why-cards">
+        <div class="why-card">
+            <i class="fa-solid fa-cloud-sun"></i>
+            <h3>Accurate Weather</h3>
+            <p>Real-time forecasts to plan farming activities better.</p>
+        </div>
+        <div class="why-card">
+            <i class="fa-solid fa-seedling"></i>
+            <h3>Smart Crop Advice</h3>
+            <p>Get crop suggestions based on soil and season.</p>
+        </div>
+        <div class="why-card">
+            <i class="fa-solid fa-wallet"></i>
+            <h3>Expense Tracking</h3>
+            <p>Track farm expenses and stay on top of your budget.</p>
+        </div>
+        <div class="why-card">
+            <i class="fa-solid fa-bell"></i>
+            <h3>Timely Alerts</h3>
+            <p>Never miss important weather or market updates.</p>
+        </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="stat-box">
+        <h2>5000+</h2>
+        <p>Farmers Helped</p>
+    </div>
+    <div class="stat-box">
+        <h2>50+</h2>
+        <p>Districts Covered</p>
+    </div>
+    <div class="stat-box">
+        <h2>10+</h2>
+        <p>Crop Types Supported</p>
+    </div>
+</section>
+
+
+<!-- animation  -->
+ <section class="stats">
+    <div class="stat-box">
+        <h2 class="count-up" data-target="5000">0</h2>
+        <p>Farmers Helped</p>
+    </div>
+    <div class="stat-box">
+        <h2 class="count-up" data-target="50">0</h2>
+        <p>Districts Covered</p>
+    </div>
+    <div class="stat-box">
+        <h2 class="count-up" data-target="10">0</h2>
+        <p>Crop Types Supported</p>
+    </div>
+</section>
+
+
+
+
+
+    
+    <footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h3>Uzhavan</h3>
+            <p>Uzhavanukku Oru Smart Thunai - helping farmers grow smarter with technology.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Weather</a></li>
+                <li><a href="#">Crop Recommendation</a></li>
+                <li><a href="#">Farm Expenses</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-envelope"></i> support@uzhavan.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Tamil Nadu, India</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Uzhavan. All rights reserved.</p>
+    </div>
+
+</footer>
+
+   <script src="./learn-more.js"></script> 
+</body>
+</html>

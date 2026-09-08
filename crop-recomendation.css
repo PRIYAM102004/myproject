@@ -1,0 +1,519 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body { 
+    background-color: #f4f4f4;
+ }
+
+ /* nav bar  */
+
+
+.nav-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    padding: 0 40px;
+    background-color: #215824;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+}
+
+/* login logout  */
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons button {
+    padding: 7px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2e7d32;
+    color: white;
+    cursor: pointer;
+}
+
+.auth-buttons button:hover {
+    background-color: gray;
+    color: #215824;
+    transform: translateY(-2px);
+}
+
+
+/* Logo bar - thani, independent */
+
+
+.logo img {
+    height: 75px;   /* idha maathina navbar affect aagaathu */
+    width: auto;
+}
+/* Logo bar - thani, independent */
+.logo-bar {
+    background-color:#F9F5E9; ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+    gap: 20px;
+    
+}
+
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.language-select select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+}
+
+/* footer  */
+
+footer {
+    background-color: #3e2723;
+    padding: 50px 40px 20px;
+    color: #e8f5e9;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-col h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: #e8f5e9;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-col a:hover {
+    color: #a5d6a7;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 13px;
+}
+
+
+
+
+/* crop section  */
+.crop-form-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+}
+
+.crop-form-section h2 {
+    font-size: 28px;
+    color: #1b5e20;
+    margin-bottom: 30px;
+}
+
+.crop-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    background-color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.form-group select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    min-width: 160px;
+}
+
+.crop-form button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 11px 24px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.crop-form button:hover {
+    background-color: #1b5e20;
+}
+
+.result-card {
+    background-color: white;
+    max-width: 500px;
+    margin: 25px auto 0;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    animation: fadeIn 0.5s ease;
+}
+
+.result-card h3 {
+    color: #2e7d32;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.result-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* background image  */
+.crop-form-section {
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://upload.wikimedia.org/wikipedia/commons/3/3b/Crop_Rows_-_geograph.org.uk_-_656084.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original');
+    background-size: cover;
+    background-position: center;
+}
+
+.crop-form-section h2 {
+    color: white;
+}
+
+/* crop list  */
+.crop-list {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.crop-list h2 {
+    font-size: 28px;
+    color: #1b5e20;
+    margin-bottom: 35px;
+}
+
+.crop-list-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.crop-item {
+    background-color: white;
+    width: 200px;
+    padding: 25px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.crop-item:hover {
+    transform: translateY(-6px);
+}
+
+.crop-item i {
+    font-size: 30px;
+    color: #2e7d32;
+    margin-bottom: 12px;
+}
+
+.crop-item h3 {
+    color: #1b5e20;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.crop-item p {
+    font-size: 13px;
+    color: #666;
+}
+
+/* crop section 2  */
+
+.crop-item {
+    background-color: white;
+    width: 140px;
+    min-height: 220px;
+    padding: 30px 15px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.crop-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.crop-item i {
+    font-size: 34px;
+    color: #2e7d32;
+    background-color: #e8f5e9;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.crop-item h3 {
+    color: #1b5e20;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.crop-item p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* medio query  */
+
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    .nav-bar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .logo-bar {
+        flex-direction: column;
+        margin-left: 0;
+        padding: 15px 20px;
+        gap: 12px;
+    }
+
+    .search-box, .search-box input {
+        width: 100%;
+    }
+
+    .language-select select {
+        width: 100%;
+    }
+
+    .auth-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .crop-form-section {
+        padding: 40px 20px;
+    }
+
+    .crop-form-section h2 {
+        font-size: 22px;
+    }
+
+    .crop-form {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+    }
+
+    .form-group select {
+        min-width: 100%;
+    }
+
+    .crop-list {
+        padding: 40px 20px;
+    }
+
+    .crop-list h2 {
+        font-size: 24px;
+    }
+
+    .crop-item {
+        width: 45%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-col {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .crop-item {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .crop-form-section h2 {
+        font-size: 18px;
+    }
+}
+
+
+
+
+/* js  */
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-bar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-bar ul.active {
+        display: flex;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-end;    /* idha add pannu - ella children-um right-side-ku po */
+        height: auto;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    .hamburger {
+        align-self: flex-end;     /* hamburger mattum specific-a right-side-ku */
+    }
+
+    .nav-bar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;               /* nav links full width-la center-a irukka */
+    }
+}

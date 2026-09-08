@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+    
+    <!-- nav bar  -->
+     <!-- 1st line: navbar (nav links + welcome msg) -->
+<div class="nav-bar">
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./dashboard.html">Dashboard</a></li>
+        <li><a href="./weather.html">Weather</a></li>
+        <li><a href="./crop-recommendation.html">Crop Recommendation</a></li>
+        <li><a href="./form-expence.html">Farm Expenses</a></li>
+        <li><a href="./alert.html">Alerts / Notifications</a></li>
+    </ul>
+   
+</div>
+
+<!-- 2nd line: logo bar (separate, independent) -->
+
+<div class="logo-bar">
+    <div class="logo">
+        <img src="./WhatsApp Image 2026-09-07 at 2.42.31 PM.jpg">
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+
+    <div class="language-select">
+        <select name="language" id="language">
+            <option value="en">English</option>
+            <option value="ta">தமிழ்</option>
+            <option value="hi">हिन्दी</option>
+        </select>
+    </div>
+
+
+<!-- login log out button  -->
+ <div class="auth-buttons">
+    <a href="./login.html" id="loginLink"><button id="loginBtn">Login</button></a>
+    <button id="logoutBtn" style="display:none;" onclick="logoutUser()">Logout</button>
+</div>
+
+</div>
+
+
+
+
+
+    <!-- hero settion  -->
+    <div class="hero-section">
+        <h1>Uzhavan</h1>
+        <p>Uzhavanukku Oru Smart Thunai</p>
+       <a href="./login.html" id="getStartedLink"><button id="getStartedBtn">Get Started</button></a>
+       <a href="./learn-more.html"><button>Learn More</button></a>
+    </div>
+
+    <div class="container">
+       
+       <!-- about section  -->
+    <section class="about">
+    <div class="about-text">
+        <h2>About Uzhavan</h2>
+        <p>Uzhavan is a smart farming platform designed to support farmers with modern technology.
+It provides useful information, tools, and solutions to make farming easier and more efficient.
+Our goal is to connect farmers with technology and help build a smarter future for agriculture.
+</p>
+    </div>
+    <div class="about-image">
+        <img src="https://t3.ftcdn.net/jpg/03/40/70/08/360_F_340700846_nF8QmOtEj37psIWn4r5yV3FKL71lTwJ7.jpg">
+    </div>
+</section>
+
+<!-- services section   -->
+<section class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+        <div class="card">
+            <img src="https://c4.wallpaperflare.com/wallpaper/574/126/359/amazing-clouds-wallpaper-preview.jpg">
+            <h3>Weather Updates</h3>
+            <p>Get accurate daily weather forecasts to plan your farming activities better.</p>
+        </div>
+        <!-- repeat for 3-4 cards -->
+       <!-- card 2 -->
+        <div class="card">
+            <img src="https://images.stockcake.com/public/2/b/4/2b457545-93e2-460e-93ea-526f8cd68fbf_large/seedling-emerges-strongly-stockcake.jpg">
+            <h3>Crop Recommendation</h3>
+            <p>Get smart crop suggestions based on soil type and season for better yield.</p>
+        </div>
+         
+        <!-- card 3 -->
+         <div class="card">
+            <img src="https://png.pngtree.com/png-vector/20191027/ourmid/pngtree-bitcoin-wallet-vector-black-color-success-banking-cash-symbol-cryptocurrency-modern-png-image_1883674.jpg">
+            <h3>Farm Expenses</h3>
+            <p> Track your farm expenses and income easily to manage your budget smartly.</p>
+        </div>
+         <!-- card 4 -->
+         <div class="card">
+            <img src="https://www.shutterstock.com/image-vector/notification-icon-vector-material-design-260nw-1072621031.jpg">
+            <h3>Alerts / Notifications</h3>
+            <p>Receive instant alerts about weather changes, pest risks, and market prices.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- seeds and fertilizer  -->
+<!-- shop section -->
+ <section class="shop-section">
+    <h2>Shop for Your Farm</h2>
+    <div class="shop-containers">
+        <div class="shop-container">
+            <img src="https://media.istockphoto.com/id/1126541751/photo/hands-planting-the-seeds-into-the-dirt.jpg?s=612x612&w=0&k=20&c=aVUr7F_H4ZSJX89Nmiw59F8WvneKeg-YsBoOiDQw0SA=">
+            <h3>Seeds</h3>
+            <p>Quality seeds for various crops, delivered right to your farm.</p>
+            <button onclick="showShopModal('seeds')">Browse Seeds</button>
+        </div>
+
+        <div class="shop-container">
+            <img src="https://img.magnific.com/free-photo/closeup-picture-gardener-s-hands-planting-plant_1150-26607.jpg?semt=ais_hybrid&w=740&q=80">
+            <h3>Fertilizer</h3>
+            <p>Right fertilizer recommendations based on your soil and crop type.</p>
+            <button onclick="showShopModal('fertilizer')">Browse Fertilizer</button>
+        </div>
+
+        <div class="shop-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI79lmpei0zi7T8ZiSea5R3PYWSIaCdcgP0ZlS-7TOxGXgxrSvZYE3s8jL&s=10">
+            <h3>Pesticides</h3>
+            <p>Safe and effective pesticides to protect your crops from pests and diseases.</p>
+            <button onclick="showShopModal('pesticides')">Browse Pesticides</button>
+        </div>
+
+        <div class="shop-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn-cRMfd2ldKs5rE3cicegWevootzPVND3sfIBX58PWo690Mm7VvaTDFN8&s=10">
+            <h3>Tools & Equipment</h3>
+            <p>Farming tools and equipment to make your daily farm work easier.</p>
+            <button onclick="showShopModal('tools')">Browse Tools</button>
+        </div>
+    </div>
+
+    <!-- Shop modal -->
+    <div class="modal-overlay" id="shopModal">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeShopModal()">✕</button>
+            <h3 id="modalTitle"></h3>
+            <ul id="modalList"></ul>
+        </div>
+    </div>
+</section>
+<!-- products section  -->
+ <!-- products section -->
+<section class="products">
+    <h2>Our Crops</h2>
+    <div class="product-cards" id="productCards">
+        <!-- Original 6 cards -->
+        <div class="card">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/070/408/616/small/golden-rice-panicles-sway-gently-in-the-breeze-ready-for-harvest-in-a-lush-green-paddy-field-photo.jpg">
+            <h3>Paddy</h3>
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2023/07/30/07/23/soft-wheat-8158264_1280.jpg">
+            <h3>Wheat</h3>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAeUhMJY4vFIsBId-3N8Sg08imqDqxL8U6MvsZFk0Cyg&s=10">
+            <h3>Vegetables</h3>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8vaGs4hJwY_BLG85OhNGpbhHqkZ060b-wC38v1_tbgyKkkYGIJRk9CYs&s=10">
+            <h3>Fruits</h3>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1bm5jQudmd46gAmN4L_5BEYkk9rNI1Z0OPa_Lt_zKXJcnTOLNX6W3re6R&s=10">
+            <h3>Sugarcane</h3>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdJPNZT7fkDphRA4BVUD0xf81vFI3OKPMSRT8uRl5LUP0uyFJJeKlTMSN8&s=10">
+            <h3>Cotton</h3>
+        </div>
+
+        <!-- Extra 4 cards - hidden by default -->
+        <div class="card extra-crop">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_7Zj8ZXVrTZguUm72UrXRBLq9YsQuD9CKqQ5F40FipxO6Zsu5uLfOaf1g&s=10">
+            <h3>Millets</h3>
+        </div>
+        <div class="card extra-crop">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT_4tNHbf3AZ5TmHrPyN7umLaZPl2jgwA9ayAJnE_Vlo029-IBnin2Ldjj&s=10">
+            <h3>Groundnut</h3>
+        </div>
+        <div class="card extra-crop">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrtMpjciULlcpnBQQXKy2mJnkOQ4KUPNn21SWRfuby0Q&s=10">
+            <h3>Pulses</h3>
+        </div>
+        <div class="card extra-crop">
+            <img src="https://www.ugaoo.com/cdn/shop/articles/9f9b3771a2.jpg?v=1727692315">
+            <h3>Maize</h3>
+        </div>
+        <div class="card extra-crop">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPa-68Mm29PlZqMVoxHq-BFGf80RZV5HHW9bIEjddUdlbbQohj-vRPqsY&s=10">
+            <h3>Chilli</h3>
+        </div>
+        <div class="card extra-crop">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc29AkGC_zl6IbWGOIq_9hl2med7SIczFtkwXqjb8J6RTxtklqIy2AL7I&s=10">
+    <h3>Banana</h3>
+        </div>
+
+    </div>
+
+    <button class="see-more-btn" id="seeMoreBtn" onclick="toggleCrops()">See More</button>
+</section>
+
+
+
+<!-- testimonials  -->
+
+<section class="testimonials">
+    <h2>What Farmers Say</h2>
+    <div class="testimonial-cards">
+        <div class="testimonial-card">
+            <p>"Uzhavan has helped me understand better farming methods and improve my crop production."</p>
+            <h4>- Ravi, Tamil Nadu</h4>
+        </div>
+        <!-- repeat 2-3 times -->
+         <!-- card 2 -->
+        <div class="testimonial-card">
+            <p>"The crop information is simple, useful, and easy for farmers to understand."</p>
+            <h4>- Kumar, Coimbatore</h4>
+        </div>
+
+        <!-- card 3 -->
+         <div class="testimonial-card">
+            <p>"With the right farming tips, I was able to reduce crop loss and improve my yield."</p>
+            <h4>- Selvam, Thanjavur</h4>
+        </div>
+
+       
+    </div>
+</section>
+
+<!-- partners section -->
+
+
+<div class="partner-logos">
+    <div class="logo-wrap" data-tooltip="Government of India">
+        <img src="https://cdn.tractorkarvan.com/tr:f-webp/images/Blogs/top-central-government-schemes-for-farmers-in-india/pm-kisan.jpg" alt="Government of India">
+    </div>
+    <div class="logo-wrap" data-tooltip="Ministry of Agriculture">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2MXACCgsL4ssm8n8BJUFtowP8KkkoXEChB-aWIgy71HKG_onBCbhnpNE1&s=10" alt="Ministry of Agriculture">
+    </div>
+    <div class="logo-wrap" data-tooltip="Indian Council of Agricultural Research">
+        <img src="https://vajiramias.sgp1.cdn.digitaloceanspaces.com/wp/current-affairs/2024/10/Indian-Council-of-Agricultural-Research-ICAR.webp?v=2" alt="ICAR">
+    </div>
+    <div class="logo-wrap" data-tooltip="National Bank for Agriculture and Rural Development">
+        <img src="https://blog.ipleaders.in/wp-content/uploads/2019/07/nab.jpg" alt="NABARD">
+    </div>
+</div>
+<!-- contact section  -->
+ <section class="contact-section">
+    <h2>Get In Touch</h2>
+  
+    <p class="contact-subtitle">Have a question or feedback? We'd love to hear from you.</p>
+
+    <form class="contact-form" id="contactForm">
+        <div class="form-row">
+            <input type="text" id="contactName" placeholder="Your Name">
+            <input type="email" id="contactEmail" placeholder="Your Email">
+        </div>
+        <input type="text" id="contactSubject" placeholder="Subject">
+        <textarea id="contactMessage" rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- stats section -->
+<section class="stats">
+    <div class="stat-box">
+        <h2 class="counter" data-target="5000">0</h2>
+        <p>Farmers Helped</p>
+    </div>
+    <div class="stat-box">
+        <h2 class="counter" data-target="6">0</h2>
+        <p>Crop Varieties</p>
+    </div>
+    <div class="stat-box">
+        <h2 class="counter" data-target="32">0</h2>
+        <p>Districts Reached</p>
+    </div>
+    <div class="stat-box">
+        <h2 class="counter" data-target="10000">0</h2>
+        <p>Alerts Sent</p>
+    </div>
+</section>
+
+<!-- footer section  -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h3>Uzhavan</h3>
+            <p>Uzhavanukku Oru Smart Thunai - helping farmers grow smarter with technology.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./Weather.html">Weather</a></li>
+                <li><a href="./crop-recommendation.html">Crop Recommendation</a></li>
+                <li><a href="./form-expence.html">Farm Expenses</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-envelope"></i> support@uzhavan.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Tamil Nadu, India</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Uzhavan. All rights reserved.</p>
+    </div>
+</footer>
+
+  
+    </div>
+
+
+   
+
+    
+
+
+    <script src="./index.js"></script>
+</body>
+</html>

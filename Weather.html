@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Weather.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+
+     <!-- nav bar  -->
+     <!-- 1st line: navbar (nav links + welcome msg) -->
+<div class="nav-bar">
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./dashboard.html">Dashboard</a></li>
+        <li><a href="./weather.html">Weather</a></li>
+        <li><a href="./crop-recommendation.html">Crop Recommendation</a></li>
+        <li><a href="./form-expence.html">Farm Expenses</a></li>
+        <li><a href="./alert.html">Alerts / Notifications</a></li>
+    </ul>
+   
+</div>
+
+<!-- 2nd line: logo bar (separate, independent) -->
+
+<div class="logo-bar">
+    <div class="logo">
+        <img src="./WhatsApp Image 2026-09-07 at 2.42.31 PM.jpg">
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+
+    <div class="language-select">
+        <select name="language" id="language">
+            <option value="en">English</option>
+            <option value="ta">தமிழ்</option>
+            <option value="hi">हिन्दी</option>
+        </select>
+    </div>
+
+
+<!-- login log out button  -->
+ <div class="auth-buttons">
+    <a href="./login.html" id="loginLink"><button id="loginBtn">Login</button></a>
+    <button id="logoutBtn" style="display:none;" onclick="logoutUser()">Logout</button>
+</div>
+
+</div>
+
+
+<hr>
+
+    
+<!-- wwther  -->
+ <section class="current-weather" id="weatherSection">
+    <div class="rain" id="rainEffect"></div>
+    <h2>Cuddalore</h2>
+    <!-- <i class="fa-solid fa-cloud-sun weather-icon" id="weatherIcon"></i> -->
+    <h1 id="tempText">32°C</h1>
+    <p id="conditionText">Partly Cloudy</p>
+    <div class="weather-details">
+        <span><i class="fa-solid fa-droplet"></i> Humidity: 65%</span>
+        <span><i class="fa-solid fa-wind"></i> Wind: 12 km/h</span>
+    </div>
+</section>
+
+
+<!-- cantainer  -->
+
+<!-- 7-day forecast -->
+<section class="forecast">
+    <h2>7-Day Forecast</h2>
+    <div class="forecast-cards" id="forecastCards">
+        <div class="forecast-card">
+            <p class="day-name">Mon</p>
+            <i class="fa-solid fa-sun day-icon"></i>
+            <p class="day-temp">34°C</p>
+        </div>
+        <div class="forecast-card">
+            <p class="day-name">Tue</p>
+            <i class="fa-solid fa-cloud-sun day-icon"></i>
+            <p class="day-temp">33°C</p>
+        </div>
+        <div class="forecast-card">
+            <p class="day-name">Wed</p>
+            <i class="fa-solid fa-cloud-rain day-icon"></i>
+            <p class="day-temp">29°C</p>
+        </div>
+        <div class="forecast-card">
+            <p class="day-name">Thu</p>
+            <i class="fa-solid fa-cloud-showers-heavy day-icon"></i>
+            <p class="day-temp">27°C</p>
+        </div>
+        <div class="forecast-card">
+            <p class="day-name">Fri</p>
+            <i class="fa-solid fa-cloud-sun day-icon"></i>
+            <p class="day-temp">31°C</p>
+        </div>
+        <div class="forecast-card">
+            <p class="day-name">Sat</p>
+            <i class="fa-solid fa-sun day-icon"></i>
+            <p class="day-temp">35°C</p>
+        </div>
+        <div class="forecast-card">
+            <p class="day-name">Sun</p>
+            <i class="fa-solid fa-sun day-icon"></i>
+            <p class="day-temp">34°C</p>
+        </div>
+    </div>
+</section>
+
+ <!-- forcast timing  -->
+ <section class="hourly-forecast">
+    <h2>Today's Hourly Forecast</h2>
+    <div class="hourly-cards">
+        <div class="hour-card">
+            <p>9 AM</p>
+            <i class="fa-solid fa-cloud-sun"></i>
+            <p>28°C</p>
+        </div>
+        <div class="hour-card">
+            <p>12 PM</p>
+            <i class="fa-solid fa-sun"></i>
+            <p>33°C</p>
+        </div>
+        <div class="hour-card">
+            <p>3 PM</p>
+            <i class="fa-solid fa-sun"></i>
+            <p>34°C</p>
+        </div>
+        <div class="hour-card">
+            <p>6 PM</p>
+            <i class="fa-solid fa-cloud-sun"></i>
+            <p>30°C</p>
+        </div>
+        <div class="hour-card">
+            <p>9 PM</p>
+            <i class="fa-solid fa-cloud"></i>
+            <p>26°C</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- footer section  -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h3>Uzhavan</h3>
+            <p>Uzhavanukku Oru Smart Thunai - helping farmers grow smarter with technology.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Weather</a></li>
+                <li><a href="#">Crop Recommendation</a></li>
+                <li><a href="#">Farm Expenses</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-envelope"></i> support@uzhavan.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Tamil Nadu, India</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Uzhavan. All rights reserved.</p>
+    </div>
+
+</footer>
+
+<script src="./weather.js"></script>
+</body>
+</html>

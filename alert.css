@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body { 
+    background-color: #f4f4f4;
+ }
+
+ /* nav bar  */
+
+
+.nav-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    padding: 0 40px;
+    background-color: #215824;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* Logo bar - thani, independent */
+
+
+.logo img {
+    height: 75px;   /* idha maathina navbar affect aagaathu */
+    width: auto;
+}
+/* Logo bar - thani, independent */
+.logo-bar {
+    background-color: #F9F5E9;;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+    gap: 20px;
+    
+}
+
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.language-select select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+}
+/* login logout  */
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons button {
+    padding: 7px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2e7d32;
+    color: white;
+    cursor: pointer;
+}
+
+.auth-buttons button:hover {
+    background-color: gray;
+    color: #215824;
+    transform: translateY(-2px);
+}
+
+
+
+/* footer  */
+
+footer {
+    background-color: #3e2723;
+    padding: 50px 40px 20px;
+    color: #e8f5e9;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-col h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: #e8f5e9;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-col a:hover {
+    color: #a5d6a7;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 13px;
+}
+
+/* container  */
+
+.alerts-section {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.alerts-section h2 {
+    font-size: 28px;
+    color: #1b5e20;
+    margin-bottom: 30px;
+}
+
+.alerts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.alert-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    padding: 18px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: left;
+    border-left: 5px solid #ccc;
+}
+
+.severity-high {
+    border-left-color: #d32f2f;
+}
+.severity-high i {
+    color: #d32f2f;
+}
+
+.severity-medium {
+    border-left-color: #f9a825;
+}
+.severity-medium i {
+    color: #f9a825;
+}
+
+.severity-low {
+    border-left-color: #2e7d32;
+}
+.severity-low i {
+    color: #2e7d32;
+}
+
+.alert-card i {
+    font-size: 24px;
+}
+
+.alert-text {
+    flex: 1;
+}
+
+.alert-text h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.alert-text p {
+    font-size: 13px;
+    color: #666;
+}
+
+.dismiss-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.dismiss-btn:hover {
+    color: #d32f2f;
+}
+
+#noAlertsMsg {
+    color: #888;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+/* alert msg  */
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.empty-state i {
+    font-size: 60px;
+    color: #a5d6a7;
+    margin-bottom: 15px;
+}
+
+.empty-state h3 {
+    color: #1b5e20;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    color: #888;
+    font-size: 14px;
+}
+
+/* menu medio query  */
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-bar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-bar ul.active {
+        display: flex;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-end;    /* idha add pannu - ella children-um right-side-ku po */
+        height: auto;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    .hamburger {
+        align-self: flex-end;     /* hamburger mattum specific-a right-side-ku */
+    }
+
+    .nav-bar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;               /* nav links full width-la center-a irukka */
+    }
+}
+
+@media (max-width: 768px) {
+    /* logo bar - stack pannu mobile-la */
+    .logo-bar {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .auth-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* footer - single column mobile-la */
+    .footer-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .footer-col {
+        min-width: 100%;
+    }
+
+    /* alerts section */
+    .alerts-section {
+        margin: 30px auto;
+        padding: 15px;
+    }
+
+    .alerts-section h2 {
+        font-size: 22px;
+    }
+
+    .alert-card {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 10px;
+    }
+
+    .alert-card i {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .alert-text h3 {
+        font-size: 14px;
+    }
+
+    .alert-text p {
+        font-size: 12px;
+    }
+
+    .footer-col h3 {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crop Recomandation</title>
+    <link rel="stylesheet" href="./alert.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+
+  <!-- nav bar  -->
+     <!-- 1st line: navbar (nav links + welcome msg) -->
+<div class="nav-bar">
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./dashboard.html">Dashboard</a></li>
+        <li><a href="./weather.html">Weather</a></li>
+        <li><a href="./crop-recommendation.html">Crop Recommendation</a></li>
+        <li><a href="./form-expence.html">Farm Expenses</a></li>
+        <li><a href="./alert.html">Alerts / Notifications</a></li>
+    </ul>
+   
+</div>
+
+<!-- 2nd line: logo bar (separate, independent) -->
+
+<div class="logo-bar">
+    <div class="logo">
+        <img src="./WhatsApp Image 2026-09-07 at 2.42.31 PM.jpg">
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+
+    <div class="language-select">
+        <select name="language" id="language">
+            <option value="en">English</option>
+            <option value="ta">தமிழ்</option>
+            <option value="hi">हिन्दी</option>
+        </select>
+    </div>
+
+
+<!-- login log out button  -->
+ <div class="auth-buttons">
+    <a href="./login.html" id="loginLink"><button id="loginBtn">Login</button></a>
+    <button id="logoutBtn" style="display:none;" onclick="logoutUser()">Logout</button>
+</div>
+
+</div>
+
+
+<hr>
+
+<!-- container  -->
+
+<section class="alerts-section">
+    <h2>Alerts & Notifications</h2>
+
+    <div class="alerts-list" id="alertsList">
+        <div class="alert-card severity-high">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <div class="alert-text">
+                <h3>Heavy Rain Warning</h3>
+                <p>Heavy rainfall expected in the next 24 hours. Protect your crops.</p>
+            </div>
+            <button class="dismiss-btn" onclick="dismissAlert(this)">✕</button>
+        </div>
+
+        <div class="alert-card severity-medium">
+            <i class="fa-solid fa-bug"></i>
+            <div class="alert-text">
+                <h3>Pest Alert</h3>
+                <p>Increased pest activity reported in nearby farms. Inspect your crops.</p>
+            </div>
+            <button class="dismiss-btn" onclick="dismissAlert(this)">✕</button>
+        </div>
+
+        <div class="alert-card severity-low">
+            <i class="fa-solid fa-chart-line"></i>
+            <div class="alert-text">
+                <h3>Market Price Update</h3>
+                <p>Cotton prices have increased by 5% this week.</p>
+            </div>
+            <button class="dismiss-btn" onclick="dismissAlert(this)">✕</button>
+        </div>
+    </div>
+
+    <p id="noAlertsMsg" style="display:none;">No new alerts. You're all caught up!</p>
+</section>
+
+
+<!-- alert message  -->
+ <div class="empty-state" id="noAlertsMsg" style="display:none;">
+    <i class="fa-solid fa-circle-check"></i>
+    <h3>All Caught Up!</h3>
+    <p>No new alerts right now. Check back later.</p>
+</div>
+
+
+    <footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h3>Uzhavan</h3>
+            <p>Uzhavanukku Oru Smart Thunai - helping farmers grow smarter with technology.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Weather</a></li>
+                <li><a href="#">Crop Recommendation</a></li>
+                <li><a href="#">Farm Expenses</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-envelope"></i> support@uzhavan.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Tamil Nadu, India</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Uzhavan. All rights reserved.</p>
+    </div>
+
+
+</footer>
+
+<script src="./alert.js"></script>
+
+   </body>
+   </html>
