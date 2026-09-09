@@ -1,3 +1,8 @@
+if (localStorage.getItem('isLoggedIn') !== 'true') {
+    alert("Please login to access this page.");
+    window.location.href = "login.html";
+}
+
 // Navbar elements
 const weatherSection = document.getElementById('weatherSection');
 const rainEffect = document.getElementById('rainEffect');
