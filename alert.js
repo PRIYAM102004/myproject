@@ -1,3 +1,7 @@
+if (localStorage.getItem('isLoggedIn') !== 'true') {
+    alert("Please login to access this page.");
+    window.location.href = "login.html";
+}
 // Hamburger menu toggle
 function toggleMenu() {
     document.querySelector('.nav-bar ul').classList.toggle('active');
