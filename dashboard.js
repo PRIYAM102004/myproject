@@ -1,3 +1,25 @@
+// Login check - login pannala na dashboard access panna koodathu
+if (localStorage.getItem('isLoggedIn') !== 'true') {
+    alert("Please login to access the dashboard.");
+    window.location.href = "login.html";
+}
+
+// idhukku keela unnoda existing code (toggleMenu, window.onload, logoutUser) continue aagum
+function toggleMenu() {
+    document.querySelector('.nav-bar ul').classList.toggle('active');
+}
+
+window.onload = function() {
+    document.getElementById('loginLink').style.display = "none";
+    document.getElementById('logoutBtn').style.display = "inline-block";
+};
+
+function logoutUser() {
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('userEmail');
+    window.location.href = "index.html";
+}
+
 function toggleMenu() {
     document.querySelector('.nav-bar ul').classList.toggle('active');
 }
