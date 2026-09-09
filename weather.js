@@ -3,6 +3,7 @@ if (localStorage.getItem('isLoggedIn') !== 'true') {
     window.location.href = "login.html";
 }
 
+
 // Navbar elements
 const weatherSection = document.getElementById('weatherSection');
 const rainEffect = document.getElementById('rainEffect');
@@ -66,12 +67,40 @@ function applyWeather(condition, isDay) {
     }
 }
 
+// whether selection 
+// District coordinates (Tamil Nadu districts)
+const districtCoords = {
+    Cuddalore: { lat: 11.7480, lon: 79.7714 },
+    Chennai: { lat: 13.0827, lon: 80.2707 },
+    Coimbatore: { lat: 11.0168, lon: 76.9558 },
+    Madurai: { lat: 9.9252, lon: 78.1198 },
+    Trichy: { lat: 10.7905, lon: 78.7047 },
+    Salem: { lat: 11.6643, lon: 78.1460 },
+    Thanjavur: { lat: 10.7870, lon: 79.1378 },
+    Erode: { lat: 11.3410, lon: 77.7172 }
+};
+
+let LATITUDE = districtCoords.Cuddalore.lat;
+let LONGITUDE = districtCoords.Cuddalore.lon;
+
+function changeDistrict() {
+    const selected = document.getElementById('districtSelect').value;
+    const coords = districtCoords[selected];
+
+    LATITUDE = coords.lat;
+    LONGITUDE = coords.lon;
+
+    document.getElementById('districtName').textContent = selected;
+
+    fetchWeather();
+    fetchForecast();
+}
+
 
 
 
 // whether api link 
-const LATITUDE = 11.7480;   // Cuddalore latitude
-const LONGITUDE = 79.7714;  // Cuddalore longitude
+
 
 async function fetchWeather() {
     try {
