@@ -61,10 +61,26 @@
 
     
 <!-- wwther  -->
- <section class="current-weather" id="weatherSection">
+
+
+<section class="current-weather" id="weatherSection">
     <div class="rain" id="rainEffect"></div>
-    <h2>Cuddalore</h2>
-    <!-- <i class="fa-solid fa-cloud-sun weather-icon" id="weatherIcon"></i> -->
+
+    <div class="district-select-box">
+        <select id="districtSelect" onchange="changeDistrict()">
+            <option value="Cuddalore">Cuddalore</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Coimbatore">Coimbatore</option>
+            <option value="Madurai">Madurai</option>
+            <option value="Trichy">Tiruchirappalli</option>
+            <option value="Salem">Salem</option>
+            <option value="Thanjavur">Thanjavur</option>
+            <option value="Erode">Erode</option>
+        </select>
+    </div>
+
+    <h2 id="districtName">Cuddalore</h2>
+    <i class="fa-solid fa-cloud-sun weather-icon" id="weatherIcon"></i>
     <h1 id="tempText">32°C</h1>
     <p id="conditionText">Partly Cloudy</p>
     <div class="weather-details">
